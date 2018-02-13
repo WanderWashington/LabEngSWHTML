@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Pagina Inicial</title>
+           <link rel="stylesheet" type="text/css" href="telasEstilo.css">
+             <link rel="stylesheet" type="text/css" href="formulariosEstilo.css">
+             <script src="../static/js/chamaExame.js"></script>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <nav>
+        <ul id="lista"> 
+           
+                <li><a href="paginaUsuario.html">Pagina Inicial</a></li>
+                <li><a href="#">Cadastro e Consulta</a>
+                    <ul>
+                   
+                        <li><a href="consultaExame.html">Consultar Exame</a></li>
+                        <li><a href="agendarConsulta.html">Agendar Consulta</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Sobre</a></li>
+                <li><a href="index.html">Sair</a></li>
+                </ul>
+         </nav>
+    <form action="agendarConsulta.html" method="post">
+      <fieldset id="formulario">
+            <legend>Agendamento de Consulta</legend>
+            <table cellspacing="20" >
+             <tr>
+              <td>
+               <label for="nome">Nome: </label>
+              </td>
+              <td align="left">
+               <input type="text" name="nome" id="nome">
+              </td>
+              <td>
+               <label for="sobrenome">Sobrenome: </label>
+              </td>
+              <td align="left">
+               <input type="text" name="sobrenome" id="sobrenome">
+              </td>
+             </tr>
+             <tr>
+              <td>
+               <label>CRA: </label>
+              </td>
+              <td align="left">
+               <input type="text" name="cra" size="13" maxlength="13" id="cra"> 
+              </td>
+             </tr>
+                 <tr>
+              <td>
+               <label>Horário: </label>
+              </td>
+              <td align="left">
+                 <input type="text" name="hora" size="2" maxlength="2"> : <input type="text" name="minutos" size="2" maxlength="2">
+              </td>
+             </tr>
+             <tr>
+                 <td>
+                  <label for="consultasDisponiveis">Consultas Disponíveis</label>
+                 </td>
+                 <td align="left">
+                  <select name="consulta" id="consulta"> 
+                  <option value="clinicoGeral">Clinico Geral</option> 
+                  <option value="pediatra">Pediatra</option> 
+                  <option value="dentista">Dentista</option> 
+                  </select>
+                 </td>
+                </tr>
+             
+             <tr>
+                 <td>
+                        <input type="submit" value="Agendar" id="botaoEnviar" onclick="notificar()">
+                         <input type="reset" value="Limpar" id="botaoResetar">
+                 </td>
+             </tr>
+                
+            </table>
+           </fieldset>  
+    
+    </form>
+    </body>
+</html>
